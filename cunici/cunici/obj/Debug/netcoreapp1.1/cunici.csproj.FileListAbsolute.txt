@@ -1,0 +1,10 @@
+C:\Users\piskovat\source\repos\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.deps.json
+C:\Users\piskovat\source\repos\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.runtimeconfig.json
+C:\Users\piskovat\source\repos\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.runtimeconfig.dev.json
+C:\Users\piskovat\source\repos\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.dll
+C:\Users\piskovat\source\repos\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.pdb
+C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.csprojResolveAssemblyReference.cache
+C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.csproj.CoreCompileInputs.cache
+C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.AssemblyInfo.cs
+C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.dll
+C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.pdb
