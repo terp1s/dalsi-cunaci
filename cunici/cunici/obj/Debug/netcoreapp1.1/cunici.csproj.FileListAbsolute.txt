@@ -8,3 +8,16 @@ C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.cspr
 C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.AssemblyInfo.cs
 C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.dll
 C:\Users\piskovat\source\repos\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.pdb
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.deps.json
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.runtimeconfig.json
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.runtimeconfig.dev.json
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.dll
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\bin\Debug\netcoreapp1.1\cunici.pdb
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.csproj.AssemblyReference.cache
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.AssemblyInfoInputs.cache
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.AssemblyInfo.cs
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.csproj.CoreCompileInputs.cache
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.dll
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.pdb
+C:\Users\Terka\Source\Repos\dalsi-cunaci\cunici\cunici\obj\Debug\netcoreapp1.1\cunici.genruntimeconfig.cache

@@ -101,6 +101,7 @@ namespace serifove_cunici
     {
         public List<Vertex> Vrcholy { get; set; }
 
+        public Spojak Cesta { get; set; }
         public void Pocet_vrcholu(int i)
         {
             Vrcholy = new List<Vertex>();
@@ -128,6 +129,8 @@ namespace serifove_cunici
             {
                 Sousedi(Console.ReadLine());
             }
+            string[] input = Console.ReadLine().Split();
+            Nejkratsi_cesta(Vrcholy[int.Parse(input[0])], Vrcholy[int.Parse(input[1])]);
 
         }
 
@@ -135,18 +138,24 @@ namespace serifove_cunici
         {
             Fronta cesta = new Fronta();
             List<Vertex> cesticka = new List<Vertex>();
+            List<int> baltik = new List<int>();
             Vertex policko = start;
-            policko.Hloubka = 1;
+            policko.Hloubka = 0;
             cesta.Vloz(policko);
-            while(policko != cil)
+            baltik.Add(policko.Nazev);
+            while (policko != cil)
             {
                 for (int i = 0; i < policko.Sousedi.Count; i++)
                 {
-                    cesta.Vloz(policko.Sousedi[i]);
-                    policko.Sousedi[i].Hloubka = policko.Hloubka;
+                    if(baltik.Contains(policko.Sousedi[i].Nazev) == false)
+                    {
+                        cesta.Vloz(policko.Sousedi[i]);
+                        baltik.Add(policko.Sousedi[i].Nazev);
+                        policko.Sousedi[i].Hloubka = policko.Hloubka + 1;
+                    }
+                    
                 }
-                policko = policko.Next;
-                cesta.OdeberPrvek();
+                policko = policko.Next;               
             }
 
             int a = 0;
@@ -155,10 +164,10 @@ namespace serifove_cunici
             while(policko != start)
             {
                 
-                if (policko.Sousedi[a].Hloubka == policko.Hloubka)
+                if (policko.Sousedi[a].Hloubka != -1 && policko.Sousedi[a].Hloubka < policko.Hloubka)
                 {
-                    cesticka.Add(policko);
                     policko = policko.Sousedi[a];
+                    cesticka.Add(policko);
                     a = 0;
                 }
                 else
@@ -167,11 +176,17 @@ namespace serifove_cunici
                 }
             }
 
+            cesticka.Reverse();
+
             foreach (Vertex item in cesticka)
             {
-                Console.Write(item.Nazev);
+                Console.Write(item.Nazev + " ");
             }
 
+            foreach(Vertex item in Vrcholy)
+            {
+                item.Hloubka = -1;
+            }
 
         }
         
@@ -185,14 +200,17 @@ namespace serifove_cunici
 
             foreach (var item in test.Vrcholy)
             {
-                Console.WriteLine(item.Nazev);
+                Console.WriteLine();
+                Console.Write(item.Nazev + ":");
+                
                 foreach (var item2 in item.Sousedi)
-                {
-                    Console.WriteLine(item2.Nazev);
+                { 
+                    Console.Write(item2.Nazev + " ");
+                    
                 }
             }
-
-            test.Nejkratsi_cesta(test.Vrcholy[0], test.Vrcholy[4]);
+            
+            
             Console.ReadKey();
         }
     }
