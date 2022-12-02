@@ -1,10 +1,8 @@
-﻿using NPOI.SS.Formula.Functions;
-
-namespace serifove_cunici
+﻿namespace serifove_cunici
 {
     class Queue<T>
     {
-        public LinkedList<T> Spojak { get; } = new LinkedList<T>();
+        private LinkedList<T> Spojak { get; } = new LinkedList<T>();
         public void Enqueue(T novy)
         {
             Node<T> novy_node = new Node<T>(novy);
@@ -22,26 +20,16 @@ namespace serifove_cunici
 
         }
 
-        public T Peek()
-        {
-            return Spojak.Zacatek.Data;
-        }
+        public T Peek() => Spojak.Zacatek.Data;
 
-        public void Dequeue()
+        public T Dequeue()
         {
+            var result = Spojak.Zacatek;
             Spojak.Zacatek = Spojak.Zacatek.Next;
-        }
+            return result.Data;
+        }        
 
-        public bool IsEmpty()
-        {
-            if (Spojak.Zacatek == null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public bool IsEmpty() => Spojak.Zacatek == null;
+       
     }
 }

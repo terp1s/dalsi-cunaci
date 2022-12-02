@@ -10,9 +10,6 @@
             Data = data;
         }
 
-        public Node()
-        {
-
-        }
+        
     }
 }

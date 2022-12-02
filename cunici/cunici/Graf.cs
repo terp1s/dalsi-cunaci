@@ -6,15 +6,8 @@ namespace serifove_cunici
 {
     class Graph
     {
-        public GraphDef Def { get; set; }
         public List<Vertex> Vrcholy { get; set; } = new List<Vertex>();
 
-        public LinkedList<T> Cesta { get; set; }
-
-        public Graph(GraphDef zadani)
-        {
-
-        }
         public Graph()
         {
 
@@ -30,26 +23,24 @@ namespace serifove_cunici
             cesta.Enqueue(start);
             string output = "";
 
-
+            Vertex current = null;
             //prohledavani do sirky dokud nedojdu do cile, nebo cil neni dosazitelny
-            while (cesta.Spojak.Zacatek.Data != cil && !cesta.IsEmpty())
+            while (current != cil && !cesta.IsEmpty())
             {
+                current = cesta.Dequeue();
                 //pro kazdy  vertex pridam do fronty vsechny jeho sousedy s hloubkou +1
-                for (int i = 0; i < cesta.Spojak.Zacatek.Data.Sousedi.Count; i++)
+                for (int i = 0; i < current.Sousedi.Count; i++)
                 {
-                    if (cesta.Spojak.Zacatek.Data.Sousedi[i].Hloubka == -1)
+                    if (current.Sousedi[i].Hloubka == -1)
                     {
-                        cesta.Enqueue(cesta.Spojak.Zacatek.Data.Sousedi[i]);
-                        cesta.Spojak.Zacatek.Data.Sousedi[i].Hloubka = cesta.Spojak.Zacatek.Data.Hloubka + 1;
+                        cesta.Enqueue(current.Sousedi[i]);
+                        current.Sousedi[i].Hloubka = current.Hloubka + 1;
                     }
-
                 }
-                cesta.Dequeue();
-
             }
 
             //nasli jsme cil
-            if (cesta.Spojak.Zacatek.Data == cil)
+            if (current == cil)
             {
                 int a = 0;
                 cesticka.Add(cil);
@@ -74,10 +65,7 @@ namespace serifove_cunici
                 foreach (Vertex item in cesticka)
                 {
                     output = output + item.Nazev;
-                }
-
-                ;
-
+                }           
             }
             else //cesta neexistuje
             {

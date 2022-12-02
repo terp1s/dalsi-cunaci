@@ -3,6 +3,32 @@ using System.Collections.Generic;
 
 namespace serifove_cunici
 {
+    class GraphFactory
+    {
+        public static Graph CreateGraph(int pocetVrcholu, (int a, int b)[] hrany)
+        {
+            Graph graph = new();
+            graph.Vrcholy = new List<Vertex>();
+            for (int a = 0; a < pocetVrcholu; a++)
+            {
+                graph.Vrcholy.Add(new Vertex());
+                graph.Vrcholy[a].Nazev = a;
+            }
+
+            for (int i = 0; i < hrany.Length; i++)
+            {
+                //pokud hrana jiz nebyla zadana, vrchlu a se prida do sousedu vrchol b a naopak
+                if (!graph.Vrcholy[hrany[i].a].Sousedi.Contains(graph.Vrcholy[hrany[i].b]))
+                {
+                    graph.Vrcholy[hrany[i].a].Sousedi.Add(graph.Vrcholy[hrany[i].b]);
+                    graph.Vrcholy[hrany[i].b].Sousedi.Add(graph.Vrcholy[hrany[i].a]);
+                }
+            }
+
+            return graph;
+        }
+    }
+
     class GraphDef
     {
         int PocetVrcholu;

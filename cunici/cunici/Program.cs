@@ -13,20 +13,14 @@ namespace serifove_cunici
                 (1, 2),
                 (3, 2),
                 (4, 2),
-                (0,1),
+                (0, 1),
             };
 
             
-            GraphDef def = new GraphDef();
-            Graph test = def.Graph;
-
-            def.Pocet_vrcholu(5);
-            def.Pocet_hran(4);
-            def.Sousedi(hrany);
+            Graph test = GraphFactory.CreateGraph(5, hrany);
 
             Vertex start = test.Vrcholy[0];
             Vertex cil = test.Vrcholy[4];
-
 
             foreach (var item in test.Vrcholy)
             {
@@ -41,7 +35,7 @@ namespace serifove_cunici
                 Console.WriteLine();
             }
 
-            Console.WriteLine(def.Cesta(start, cil));
+            Console.WriteLine(test.Nejkratsi_cesta(start, cil));
             
             Console.ReadKey();
         }

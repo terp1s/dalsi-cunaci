@@ -4,9 +4,9 @@
     {
         LinkedList<T> Spojak { get; } = new LinkedList<T>();
 
-        public void Push(int i)
+        public void Push(T data)
         {
-            Node<T> novy = new Node<T>();
+            Node<T> novy = new Node<T>(data);
             novy.Next = Spojak.Zacatek;
             Spojak.Zacatek = novy;
         }
